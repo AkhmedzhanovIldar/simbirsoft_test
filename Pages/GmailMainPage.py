@@ -12,7 +12,7 @@ class GmailMainPageLocators:
 class SendMail(BasePage):
 
     def count_mail(self,sender):
-        count = len(self.find_elements((By.XPATH, f"(.//*[@class='afn']//*[@email='{sender}'])")))
+        count = len(self.find_elements((By.XPATH, f"(.//*[@class='afn']//*[@name='{sender}'])")))
         return count
 
     def click_new_email_button(self):

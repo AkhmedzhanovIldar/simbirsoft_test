@@ -25,11 +25,11 @@ def test_auth(browser):
 def test_send_mail(browser):
     send_mail = SendMail(browser)
     with allure.step("Подсчет количества писем от адресата"):
-        count_mail = send_mail.count_mail('farit.valiahmetov@simbirsoft.com')
+        count_mail = send_mail.count_mail('farit.valiahmetov')
     with allure.step("Нажатие кнопки написать"):
         send_mail.click_new_email_button()
     with allure.step("Ввод почты получателя письма"):
-        send_mail.enter_recepient('akhmedzhanovildar@gmail.com')
+        send_mail.enter_recepient('farit.valiahmetov@simbirsoft.com')
     with allure.step("Ввод темы письма"):
         send_mail.enter_subject('Тестовое задание. Ахмеджанов')
     with allure.step("Добавление количества писем в текст письма"):
